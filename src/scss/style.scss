@@ -1,6 +1,3 @@
-:root {
-}
-
 @font-face {
     font-family: "Send Flower";
     src: url("../../src/static/fonts/Send_Flowers/SendFlowers-Regular.ttf");
@@ -17,6 +14,7 @@
     font-weight: bold;
 }
 
+body,
 body * {
     font-family: "Spectral";
     box-sizing: border-box;
