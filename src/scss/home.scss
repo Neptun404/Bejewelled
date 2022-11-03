@@ -1,4 +1,56 @@
+@use 'variables' as var;
+
+svg,
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    place-items: center;
+    padding: .5rem 2rem;
+
+    .header__logo--text {
+        font-family: 'Send Flower';
+        font-size: 1rem;
+        color: var.$pink;
+    }
+    
+    .header__menu-container {
+        width: 100%;
+        max-width: 2rem;
+        cursor: pointer;
+        display: flex;
+        place-items: center;
+    }
+
+    .header__logo--text,
+    .header__menu-container {
+        margin: 0rem;
+        margin-left: auto;
+    }
+}
 
 
+#hero__section {
+    position: relative;
 
+    * {
+        transition: 700ms all;
+    }
 
+    .hero__text {
+        font-family: 'Send Flower';
+        color: var.$black75;
+        max-width: 14rem;
+        position: absolute;
+        margin-left: 2%;
+        top: 35%;
+        font-size: 1rem;
+    }
+
+    .hero__image {
+        height: 14.5625rem;
+    }
+}
