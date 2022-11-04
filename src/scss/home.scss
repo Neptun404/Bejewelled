@@ -222,6 +222,17 @@ body {
     }
 }
 
+
+@include mixins.media(768px) {
+    #img-desc__section--mobile {
+        display: none;
+    }
+
+    #img-desc__section--desktop {
+        display: block;
+    }
+}
+
 @include mixins.media(900px) {
     #hero__section {
         height: 27rem;
@@ -235,7 +246,6 @@ body {
             font-size: 1.3rem;
             max-width: 10rem;
             border-radius: 1rem;
-            top: 65%;
         }
     }
 }
@@ -243,5 +253,9 @@ body {
 @include mixins.media(1220px) {
     #hero__section {
         height: 40rem;
+
+        .hero__link {
+            top: 65%;
+        }
     }
 }
