@@ -17,6 +17,11 @@ footer {
     &__social {
         display: flex;
         justify-content: space-between;
+
+        p {
+            max-width: 15rem;
+            text-align: center;
+        }
     }
 
     &__icon-container {
