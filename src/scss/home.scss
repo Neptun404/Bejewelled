@@ -1,4 +1,5 @@
 @use "header";
+@use "footer";
 @use "variables" as var;
 
 svg,
@@ -101,6 +102,7 @@ img {
     display: flex;
     flex-direction: column;
     place-items: center;
+    padding-bottom: 5rem;
 }
 
 .book-appointment {
