@@ -69,6 +69,113 @@ body {
 
 #img-desc__section--desktop {
     display: none;
+    padding: 5rem 0rem;
+    padding-bottom: 0rem;
+
+    .img-desc-1__description,
+    .img-desc-2__description {
+        font-size: 1.3rem;
+        color: var.$black75;
+    }
+
+    .img-desc-1 {
+        &__description {
+            max-width: 24rem;
+            margin: auto;
+            position: relative;
+            right: 3rem;
+            top: 1rem;
+        }
+
+        &__images {
+            display: flex;
+            place-content: center;
+        }
+
+        &__img {
+            max-width: 15rem;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 1rem;
+            position: relative;
+            max-width: 20rem;
+            height: 13rem;
+
+            &-1 {
+                margin-top: 2rem;
+                left: 1rem;
+                z-index: 1;
+            }
+
+            &-2 {
+                right: 1rem;
+                z-index: 0;
+            }
+        }
+    }
+
+    .img-desc-2 {
+        &__description {
+            text-align: right;
+            margin: 5rem auto 2rem auto;
+            max-width: 23rem;
+        }
+
+        &__images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        &__img {
+            max-width: 10rem;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgb(45 0 16 / 10%);
+            border-radius: 1rem;
+            display: block;
+            box-sizing: border-box;
+
+            &-1 {
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: end;
+                max-width: 16rem;
+                position: relative;
+                left: 2rem;
+                z-index: 2;
+
+                max-height: 14rem;
+                max-width: 17rem;
+                padding: 1rem;
+            }
+
+            &-2 {
+                grid-row: 1;
+                grid-column: 2;
+                max-height: 15rem;
+                padding: 1rem 4rem;
+                max-width: 19rem;
+                position: relative;
+                top: 2rem;
+                right: 1rem;
+                z-index: 1;
+                left: -2rem;
+            }
+
+            &-3 {
+                grid-column: 1/2;
+                grid-row: 2;
+                justify-self: end;
+                position: relative;
+                left: 2rem;
+                padding: 0rem 2rem;
+                max-width: 15rem;
+                max-height: 18rem;
+                top: -8rem;
+            }
+        }
+    }
 }
 #img-desc__section--mobile {
     padding: 2rem;
@@ -221,7 +328,6 @@ body {
         font-size: 1.8rem;
     }
 }
-
 
 @include mixins.media(768px) {
     #img-desc__section--mobile {
