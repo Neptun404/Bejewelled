@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "start tsc -w && start sass --watch src/scss:./build/css",
-        "format": "npx prettier --write ."
+        "format": "npx prettier --write .",
+        "sass": "sass --watch src/scss:./build/css"
     },
     "keywords": [],
     "author": "",
