@@ -1,6 +1,7 @@
 @use "header";
 @use "footer";
 @use "variables" as var;
+@use "mixins" as mixins;
 
 svg,
 img {
@@ -52,8 +53,15 @@ body {
         margin-left: 2%;
         max-width: 14rem;
         position: absolute;
-        top: 35%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0rem 0rem 0rem 1rem;
     }
+
+    .hero__link {
+        display: none;
+    }
+
     .hero__image {
         height: 14.5625rem;
     }
@@ -156,5 +164,84 @@ body {
         max-width: 8em;
         text-align: center;
         padding: 0.5em 2em;
+    }
+}
+
+@include mixins.media(400px) {
+    #hero__section {
+        .hero__text {
+            font-size: 1.3rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@include mixins.media(500px) {
+    #hero__section {
+        height: 18rem;
+        .hero__image {
+            height: 100%;
+        }
+    }
+}
+
+@include mixins.media(550px) {
+    #hero__section .hero__text {
+        font-size: 1.6rem;
+        max-width: 20rem;
+        margin-left: 7%;
+    }
+}
+
+@include mixins.media(650px) {
+    #hero__section {
+        height: 23rem;
+
+        .hero__link {
+            background: var.$lightPink;
+            color: white;
+            display: block;
+            font-size: 1rem;
+            left: 0%;
+            margin-left: 7%;
+            margin-top: 0.5rem;
+            max-width: 8rem;
+            padding: 0.8em 2em;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            top: 70%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@include mixins.media(700px) {
+    #hero__section .hero__text {
+        font-size: 1.8rem;
+    }
+}
+
+@include mixins.media(900px) {
+    #hero__section {
+        height: 27rem;
+
+        .hero__text {
+            font-size: 2.4rem;
+            max-width: 28rem;
+        }
+
+        .hero__link {
+            font-size: 1.3rem;
+            max-width: 10rem;
+            border-radius: 1rem;
+            top: 65%;
+        }
+    }
+}
+
+@include mixins.media(1220px) {
+    #hero__section {
+        height: 40rem;
     }
 }
