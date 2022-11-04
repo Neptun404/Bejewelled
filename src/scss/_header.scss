@@ -1,0 +1,23 @@
+
+header {
+    display: flex;
+    padding: 0.5rem 2rem;
+    place-items: center;
+
+    .header__logo--text {
+        color: var.$pink;
+        font-family: "Send Flower";
+        font-size: 1rem;
+    }
+    .header__menu-container {
+        cursor: pointer;
+        display: flex;
+        max-width: 2rem;
+        place-items: center;
+        width: 100%;
+    }
+    .header__logo--text,
+    .header__menu-container {
+        margin: 0rem 0rem 0rem auto;
+    }
+}

@@ -1,31 +1,10 @@
 @use "variables" as var;
+@use "header";
+
 svg,
 img {
     height: 100%;
     width: 100%;
-}
-
-header {
-    display: flex;
-    padding: 0.5rem 2rem;
-    place-items: center;
-
-    .header__logo--text {
-        color: var.$pink;
-        font-family: "Send Flower";
-        font-size: 1rem;
-    }
-    .header__menu-container {
-        cursor: pointer;
-        display: flex;
-        max-width: 2rem;
-        place-items: center;
-        width: 100%;
-    }
-    .header__logo--text,
-    .header__menu-container {
-        margin: 0rem 0rem 0rem auto;
-    }
 }
 
 #hero__section {
@@ -75,3 +54,44 @@ header {
     }
 }
 
+#custom-design__section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.custom-design {
+    &__header {
+        font-family: "Send Flower";
+        text-align: center;
+        text-decoration: underline;
+        width: 7em;
+    }
+
+    &__instructions {
+        max-width: 15em;
+        position: relative;
+
+        .custom-design__line {
+            display: block;
+            box-sizing: border-box;
+            width: 0.5em;
+            height: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: var.$darkishPink;
+            margin: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__instruction-container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        margin: 0em auto 2em auto;
+        background: white;
+    }
+}
