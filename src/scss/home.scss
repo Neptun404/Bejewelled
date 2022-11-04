@@ -8,6 +8,37 @@ img {
     width: 100%;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.bg-ring {
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#bg-ring-1 {
+    width: 45rem;
+    height: 30rem;
+    transform: rotateZ(30deg);
+    top: 30%;
+    right: -20rem;
+}
+
+#bg-ring-2 {
+    transform: matrix(-0.88, 0.47, 0.47, 0.88, 0, 0);
+    left: -15rem;
+    top: 67%;
+    width: 36rem;
+    height: 25rem;
+}
+
 #hero__section {
     position: relative;
 
