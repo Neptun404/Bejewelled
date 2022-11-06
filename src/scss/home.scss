@@ -330,6 +330,20 @@ body {
 }
 
 @include mixins.media(700px) {
+    #bg-ring {
+        &-1 {
+            width: 55rem;
+            height: 38rem;
+        }
+
+        &-2 {
+            left: -24rem;
+            top: 68%;
+            width: 50rem;
+            height: 30rem;
+        }
+    }
+
     #hero__section .hero__text {
         font-size: 1.8rem;
     }
@@ -342,11 +356,16 @@ body {
 
     #img-desc__section--desktop {
         display: block;
+
+        .img-desc__1 {
+            margin-bottom: 10rem;
+        }
     }
 
     .custom-design__heading {
         font-size: 1.6rem;
         margin-bottom: 4rem;
+        margin-top: 0rem;
     }
 
     .custom-design__instructions {
