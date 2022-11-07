@@ -60,10 +60,20 @@ footer {
         }
 
         .footer__info {
+            margin-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 0em;
+            }
             p {
                 text-align: left;
+                margin: 0rem;
             }
         }
+    }
+
+    .footer__info-container {
+        margin-bottom: 1em;
     }
 
     .footer__socials-container {
