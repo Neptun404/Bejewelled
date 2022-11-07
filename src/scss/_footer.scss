@@ -44,10 +44,9 @@ footer {
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: max-content 1fr;
         align-items: center;
-
-        padding:  2em 7em;
+        padding: 5em 7em;
     }
 
     .footer__info-container,
@@ -69,6 +68,9 @@ footer {
 
     .footer__socials-container {
         grid-row: 2;
+        flex-direction: row;
+        align-self: flex-start;
+        margin-left: 3rem;
     }
 
     .footer__logo-text {
@@ -77,5 +79,9 @@ footer {
         grid-column: 2;
         align-self: center;
         margin: auto;
+    }
+
+    .footer__social p {
+        display: none;
     }
 }
