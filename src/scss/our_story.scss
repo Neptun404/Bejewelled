@@ -1,7 +1,167 @@
 @use "header";
 @use "footer";
+@use "variables" as var;
+@use "mixins" as mixins;
 
 img {
-    width: 100%;
     height: 100%;
+    width: 100%;
+}
+
+main {
+    padding-top: 3rem;
+}
+
+#story-1__section,
+#story-2__section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.story-1,
+.story-2 {
+    &__img-cont {
+        height: 20em;
+        position: relative;
+        transition: 500ms height;
+
+        img {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .img-overlay {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(45, 0, 16, 0.375) 69.27%
+            );
+            display: block;
+            box-sizing: border-box;
+            height: 100%;
+            left: 0%;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            opacity: 0.1;
+        }
+    }
+
+    &__description {
+        padding: 1em 2em;
+
+        h2 {
+            position: absolute;
+            top: 13rem;
+            left: 5%;
+            width: 80%;
+            max-width: 12em;
+            color: white;
+            transition: 500ms top;
+        }
+
+        p {
+            text-align: center;
+            width: 100%;
+            max-width: 25em;
+            margin: 2em auto;
+        }
+    }
+}
+
+#book-appointment__section {
+    padding: 8em 2em;
+
+    a {
+        margin: auto;
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 1em 2em;
+        color: white;
+        text-decoration: none;
+        background: var.$lightPink;
+        border-radius: 0.5em;
+    }
+}
+
+@include mixins.media(500px) {
+    .story-1,
+    .story-2 {
+        &__img-cont {
+            height: 30em;
+        }
+
+        &__description {
+            h2 {
+                top: 14em;
+            }
+        }
+    }
+}
+
+@include mixins.media(1020px) {
+    main {
+        padding-top: 0em;
+    }
+
+    #story-1__section {
+        flex-direction: row-reverse;
+        margin: 2.5rem 0rem 5rem 0rem;
+    }
+
+    #story-2__section {
+        flex-direction: row;
+    }
+
+    #story-1__section,
+    #story-2__section {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .story-1,
+    .story-2 {
+        &__img-cont {
+            width: 30%;
+            max-width: 20rem;
+        }
+
+        &__description {
+            h2 {
+                position: initial;
+                color: var.$black75;
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1.2em;
+                color: var.$black75;
+            }
+        }
+    }
+    .story-1__description p {
+        text-align: left;
+    }
+
+    .story-2__description {
+        h2 {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        p {
+            text-align: right;
+        }
+    }
+
+    #book-appointment__section a {
+        max-width: 20em;
+        font-size: 1.2em;
+        padding: 1em 4em;
+    }
 }
