@@ -12,6 +12,11 @@
     <body>
         <img class="bg-ring" id="bg-ring-1" src="./static/images/ring.png" />
         <img class="bg-ring" id="bg-ring-2" src="./static/images/ring2.png" />
+        <div id="mobile-menu" class="header__mobile-menu header__mobile-menu--closed">
+            <a href="./index.html">Home</a>
+            <a href="">About</a>
+            <a href="">Book Appointment</a>
+        </div>
 
         <header>
 
@@ -24,7 +29,7 @@
 
             <div class="header__mobile-nav">
                 <p class="header__logo--text">Bejewelled</p>
-                <div class="header__menu-container">
+                <div tabindex="2" id="header__menu-container" class="header__menu-container">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill-rule="evenodd"
@@ -291,5 +296,7 @@
 
             <p class="footer__logo-text">Bejewelled</p>
         </footer>
+
+        <script src="../build/javascript/index.js"></script>
     </body>
 </html>

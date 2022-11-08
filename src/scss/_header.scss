@@ -51,21 +51,61 @@ header {
     flex-direction: column;
     z-index: 1;
     height: 100vh;
-    background: lightblue;
+    background: white;
     align-items: center;
     justify-content: center;
     top: 0%;
     padding: 0em 2em;
     transition: all 500ms;
-    left: -13rem;
+    left: -17rem;
 
     a {
-        color: black;
+        color: var.$black75;
         text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 2em;
+        margin-bottom: 0.5em;
+        transition: color 100ms, background 100ms;
+
+        &:hover,
+        &:focus-within {
+            color: var.$black;
+            background: var.$lightPink;
+        }
+    }
+
+    &--closed::after {
+        content: "";
+        width: 0vw;
+        position: absolute;
+        background: var.$black50;
+        height: 100vh;
+        left: 100%;
+        transition: all 500ms 100ms;
+    }
+
+    &--opened::after {
+        content: "";
+        width: 100vw;
+        position: absolute;
+        background: var.$black50;
+        height: 100vh;
+        left: 100%;
+        transition: all 500ms 100ms;
+    }
+}
+
+@include mixins.media(500px) {
+    .header__logo--text {
+        font-size: 1.3rem;
     }
 }
 
 @include mixins.media(1020px) {
+    header {
+        position: unset;
+    }
     .header {
         &__desktop-nav {
             display: block;
