@@ -12,12 +12,6 @@
     padding: 0.5rem 2rem;
     place-items: center;
 
-    .header__logo--text {
-        color: var.$pink;
-        font-family: "Send Flower";
-        font-size: 1rem;
-    }
-
     .header__menu-container {
         cursor: pointer;
         display: flex;
@@ -36,6 +30,12 @@
     display: none;
 }
 
+.header__logo--text {
+    color: var.$pink;
+    font-family: "Send Flower";
+    font-size: 1rem;
+}
+
 @include mixins.media(1020px) {
     .header {
         &__desktop-nav {
@@ -45,5 +45,26 @@
         &__mobile-nav {
             display: none;
         }
+    }
+
+    .header__desktop-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            margin: 1em;
+            color: var.$black75;
+            text-decoration: none;
+
+            &:focus-within,
+            &:hover {
+                color: var.$black;
+            }
+        }
+    }
+
+    .header__logo--text {
+        font-size: 1.4em;
     }
 }
