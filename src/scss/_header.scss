@@ -1,44 +1,49 @@
 @use "variables" as var;
 @use "mixins" as mixins;
 
-header {
-    .header__desktop-nav,
-    .header__mobile-nav {
-        width: 100%;
-        box-sizing: border-box;
+.header__desktop-nav,
+.header__mobile-nav {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header__mobile-nav {
+    display: flex;
+    padding: 0.5rem 2rem;
+    place-items: center;
+
+    .header__logo--text {
+        color: var.$pink;
+        font-family: "Send Flower";
+        font-size: 1rem;
     }
 
-    .header__mobile-nav {
+    .header__menu-container {
+        cursor: pointer;
         display: flex;
-        padding: 0.5rem 2rem;
+        max-width: 2rem;
         place-items: center;
-
-        .header__logo--text {
-            color: var.$pink;
-            font-family: "Send Flower";
-            font-size: 1rem;
-        }
-
-        .header__menu-container {
-            cursor: pointer;
-            display: flex;
-            max-width: 2rem;
-            place-items: center;
-            width: 100%;
-        }
-
-        .header__logo--text,
-        .header__menu-container {
-            margin: 0rem 0rem 0rem auto;
-        }
+        width: 100%;
     }
 
-    .header__desktop-nav {
-        display: none;
+    .header__logo--text,
+    .header__menu-container {
+        margin: 0rem 0rem 0rem auto;
     }
 }
 
+.header__desktop-nav {
+    display: none;
+}
+
 @include mixins.media(1020px) {
-    header {
+    .header {
+        &__desktop-nav {
+            display: block;
+        }
+
+        &__mobile-nav {
+            display: none;
+        }
     }
 }
