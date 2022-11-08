@@ -511,6 +511,8 @@ body {
 @include mixins.media(1220px) {
     #hero__section {
         height: 40rem;
+        max-width: 120rem;
+        margin: auto;
 
         .hero__link {
             top: 65%;
