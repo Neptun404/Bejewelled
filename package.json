@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "start tsc -w && start sass --watch src/scss:./build/css",
+        "dev": "tsc -w",
         "format": "npx prettier --write .",
         "sass": "sass --watch src/scss:./build/css"
     },
