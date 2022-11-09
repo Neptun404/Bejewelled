@@ -8,6 +8,7 @@ header {
     z-index: 1;
     background: white;
     width: 100vw;
+    z-index: 3;
 }
 
 .header__desktop-nav,
@@ -58,6 +59,7 @@ header {
     padding: 0em 2em;
     transition: all 500ms;
     left: -17rem;
+    z-index: 3;
 
     a {
         color: var.$black75;
