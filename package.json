@@ -6,8 +6,7 @@
     "scripts": {
         "dev": "tsc -w",
         "format": "npx prettier --write .",
-        "sass": "sass --watch src/scss:./src/build/css",
-        "build": "tsc --build && sass"
+        "sass": "sass --watch src/scss:./src/build/css"
     },
     "keywords": [],
     "author": "",
