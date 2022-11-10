@@ -36,7 +36,7 @@ header {
 }
 
 .header__logo--text {
-  color: rgba(255, 17, 103, 0.7);
+  color: #b90020;
   font-family: "Send Flower";
   font-size: 1.3rem;
 }
@@ -151,7 +151,7 @@ footer svg {
 }
 .footer__logo-text {
   font-size: 2em;
-  color: white;
+  color: #f8002b;
   font-family: "Send Flower";
   margin: auto;
   width: max-content;
@@ -455,7 +455,7 @@ body {
   font-size: 1.4em;
 }
 .book-appointment__link {
-  color: white;
+  color: rgb(102, 61, 61);
   background: rgba(255, 17, 103, 0.2);
   text-decoration: none;
   max-width: 8em;
