@@ -1,23 +1,23 @@
 @font-face {
-    font-family: "Send Flower";
-    src: url("../../src/static/fonts/Send_Flowers/SendFlowers-Regular.ttf");
+  font-family: "Send Flower";
+  src: url("../../static/fonts/Send_Flowers/SendFlowers-Regular.ttf");
 }
 @font-face {
-    font-family: "Spectral";
-    src: url("../../src/static/fonts/Spectral/Spectral-Regular.ttf");
+  font-family: "Spectral";
+  src: url("../../static/fonts/Spectral/Spectral-Regular.ttf");
 }
 @font-face {
-    font-family: "Spectral";
-    src: url("../../src/static/fonts/Spectral/Spectral-Bold.ttf");
-    font-weight: bold;
+  font-family: "Spectral";
+  src: url("../../static/fonts/Spectral/Spectral-Bold.ttf");
+  font-weight: bold;
 }
 body,
 body * {
-    font-family: "Spectral";
+  font-family: "Spectral";
 }
 
 body {
-    margin: 0rem;
+  margin: 0rem;
 }
 
 /*# sourceMappingURL=style.css.map */
