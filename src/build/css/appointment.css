@@ -124,7 +124,7 @@ header {
 .header__logo--text {
   color: rgba(255, 17, 103, 0.7);
   font-family: "Send Flower";
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .header__mobile-menu {

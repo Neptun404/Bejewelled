@@ -1,0 +1,355 @@
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  background: white;
+  width: 100vw;
+  z-index: 3;
+}
+
+.header__desktop-nav,
+.header__mobile-nav {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header__mobile-nav {
+  display: flex;
+  padding: 0.5rem 2rem;
+  place-items: center;
+}
+.header__mobile-nav .header__menu-container {
+  cursor: pointer;
+  display: flex;
+  max-width: 2rem;
+  place-items: center;
+  width: 100%;
+}
+.header__mobile-nav .header__logo--text,
+.header__mobile-nav .header__menu-container {
+  margin: 0rem 0rem 0rem auto;
+}
+
+.header__desktop-nav {
+  display: none;
+}
+
+.header__logo--text {
+  color: rgba(255, 17, 103, 0.7);
+  font-family: "Send Flower";
+  font-size: 1.3rem;
+}
+
+.header__mobile-menu {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  z-index: 1;
+  height: 100vh;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  padding: 0em 2em;
+  transition: all 500ms;
+  left: -17rem;
+  z-index: 3;
+}
+.header__mobile-menu a {
+  color: rgba(45, 0, 16, 0.75);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 2em;
+  margin-bottom: 0.5em;
+  transition: color 100ms, background 100ms;
+}
+.header__mobile-menu a:hover, .header__mobile-menu a:focus-within {
+  color: #2d0010;
+  background: rgba(255, 17, 103, 0.2);
+}
+.header__mobile-menu--closed::after {
+  content: "";
+  width: 0vw;
+  position: absolute;
+  background: rgba(45, 0, 16, 0.5);
+  height: 100vh;
+  left: 100%;
+  transition: all 500ms 100ms;
+}
+.header__mobile-menu--opened::after {
+  content: "";
+  width: 100vw;
+  position: absolute;
+  background: rgba(45, 0, 16, 0.5);
+  height: 100vh;
+  left: 100%;
+  transition: all 500ms 100ms;
+}
+
+@media only screen and (min-width: 500px) {
+  .header__logo--text {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  header {
+    position: unset;
+  }
+  .header__desktop-nav {
+    display: block;
+  }
+  .header__mobile-nav {
+    display: none;
+  }
+  .header__desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__desktop-nav a {
+    margin: 1em;
+    color: rgba(45, 0, 16, 0.75);
+    text-decoration: none;
+  }
+  .header__desktop-nav a:focus-within, .header__desktop-nav a:hover {
+    color: #2d0010;
+  }
+  .header__logo--text {
+    font-size: 1.4em;
+  }
+  .header__mobile-menu {
+    display: none;
+  }
+}
+footer {
+  padding: 2em;
+  background: rgba(255, 17, 103, 0.2);
+}
+footer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__info-container, .footer__socials-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.footer__info, .footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__info p, .footer__social p {
+  max-width: 15rem;
+  text-align: center;
+}
+.footer__icon-container {
+  max-width: 1.5em;
+  margin-right: 1em;
+}
+.footer__logo-text {
+  font-size: 2em;
+  color: white;
+  font-family: "Send Flower";
+  margin: auto;
+  width: max-content;
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 760px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 1fr;
+    align-items: center;
+    padding: 5em 7em;
+  }
+  .footer__info-container,
+.footer__socials-container {
+    place-items: flex-start;
+  }
+  .footer__info-container .footer__icon-container,
+.footer__socials-container .footer__icon-container {
+    max-width: 2em;
+    margin: auto;
+    margin-right: 2em;
+  }
+  .footer__info-container .footer__info,
+.footer__socials-container .footer__info {
+    margin-bottom: 0.5em;
+  }
+  .footer__info-container .footer__info:last-child,
+.footer__socials-container .footer__info:last-child {
+    margin-bottom: 0em;
+  }
+  .footer__info-container .footer__info p,
+.footer__socials-container .footer__info p {
+    text-align: left;
+    margin: 0rem;
+  }
+  .footer__info-container {
+    margin-bottom: 1em;
+  }
+  .footer__socials-container {
+    grid-row: 2;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 3rem;
+  }
+  .footer__logo-text {
+    font-size: 3em;
+    grid-row: 1/span 2;
+    grid-column: 2;
+    align-self: center;
+    margin: auto;
+  }
+  .footer__social p {
+    display: none;
+  }
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 3rem;
+}
+
+#story-1__section,
+#story-2__section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.story-1__img-cont,
+.story-2__img-cont {
+  height: 20em;
+  position: relative;
+  transition: 500ms height;
+}
+.story-1__img-cont img,
+.story-2__img-cont img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.story-1__img-cont .img-overlay,
+.story-2__img-cont .img-overlay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(45, 0, 16, 0.375) 69.27%);
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  opacity: 0.1;
+}
+.story-1__description,
+.story-2__description {
+  padding: 1em 2em;
+}
+.story-1__description h2,
+.story-2__description h2 {
+  position: absolute;
+  top: 13rem;
+  left: 5%;
+  width: 80%;
+  max-width: 12em;
+  color: white;
+  transition: 500ms top;
+}
+.story-1__description p,
+.story-2__description p {
+  text-align: center;
+  width: 100%;
+  max-width: 25em;
+  margin: 2em auto;
+}
+
+#book-appointment__section {
+  padding: 8em 2em;
+}
+#book-appointment__section a {
+  margin: auto;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1em 2em;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 17, 103, 0.2);
+  border-radius: 0.5em;
+  max-width: 16em;
+}
+
+@media only screen and (min-width: 500px) {
+  .story-1__img-cont,
+.story-2__img-cont {
+    height: 30em;
+  }
+  .story-1__description h2,
+.story-2__description h2 {
+    top: 14em;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  main {
+    padding-top: 0em;
+  }
+  #story-1__section {
+    flex-direction: row-reverse;
+    margin: 2.5rem 0rem 5rem 0rem;
+  }
+  #story-2__section {
+    flex-direction: row;
+  }
+  #story-1__section,
+#story-2__section {
+    align-items: center;
+    justify-content: center;
+  }
+  .story-1__img-cont,
+.story-2__img-cont {
+    width: 30%;
+    max-width: 20rem;
+  }
+  .story-1__description h2,
+.story-2__description h2 {
+    position: initial;
+    color: rgba(45, 0, 16, 0.75);
+    font-size: 1.6em;
+  }
+  .story-1__description p,
+.story-2__description p {
+    font-size: 1.2em;
+    color: rgba(45, 0, 16, 0.75);
+  }
+  .story-1__description p {
+    text-align: left;
+  }
+  .story-2__description h2 {
+    margin-left: auto;
+    text-align: right;
+  }
+  .story-2__description p {
+    text-align: right;
+  }
+  #book-appointment__section a {
+    max-width: 20em;
+    font-size: 1.2em;
+    padding: 1em 4em;
+  }
+}
+
+/*# sourceMappingURL=our_story.css.map */
