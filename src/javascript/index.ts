@@ -3,7 +3,7 @@ console.log("Hello, World");
 const menuIconCont = document.getElementById("header__menu-container");
 let isOpened = false;
 
-menuIconCont!.addEventListener("click", function () {
+function toggleMenu() {
     // Toggle menu navigation to slide out
     const mobileNav = document.getElementById("mobile-menu");
     const openNav = "0rem",
@@ -23,5 +23,14 @@ menuIconCont!.addEventListener("click", function () {
     // Disable scrolling
     const htmlTag = document.body.parentElement;
     htmlTag!.style.overflowY = isOpened ? "hidden" : "initial";
-    console.log(htmlTag);
+}
+
+menuIconCont!.addEventListener("keypress", function (e) {
+    if (e.key !== "Enter") return;
+
+    toggleMenu();
+});
+
+menuIconCont!.addEventListener("click", function () {
+    toggleMenu();
 });
