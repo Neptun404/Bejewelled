@@ -1,7 +1,114 @@
 @use "footer";
 @use "header";
+@use "variables" as var;
+@use "mixins" as mixins;
 
 svg {
     width: 100%;
     height: 100%;
+}
+
+.bg__circle {
+    &-1,
+    &-2 {
+        width: 20%;
+        height: 20%;
+        min-width: 200px;
+        min-height: 200px;
+        opacity: .4;
+    }
+
+    &-1 {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+
+    &-2 {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+    }
+}
+
+main {
+    padding: 5rem 0rem;
+    position: relative;
+
+    h1 {
+        color: var.$black;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+}
+
+form {
+    width: 80%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0em auto;
+}
+
+.form-input {
+    margin-bottom: 2rem;
+
+    &__label {
+        display: flex;
+        align-items: center;
+        color: var.$black75;
+    }
+
+    &__label-icon {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em;
+    }
+
+    &__ipt {
+        border: none;
+        border-bottom: 0.1em solid black;
+        outline: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    small {
+        color: var.$black50;
+    }
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 1em 2em;
+    color: var.$black75;
+    transition: all 500ms;
+    cursor: pointer;
+
+    &__icon-cont {
+        width: 2em;
+        height: 2em;
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        right: 0.5em;
+    }
+
+    &:focus-within,
+    &:hover {
+        background: var.$darkishPink;
+        color: white;
+        fill: white;
+    }
+}
+
+@include mixins.media(768px) {
+
 }
