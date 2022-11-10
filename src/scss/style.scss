@@ -1,6 +1,24 @@
-:root {
-    box-sizing: border-box;
-    display: block;
-    padding: 0rem;
+@font-face {
+    font-family: "Send Flower";
+    src: url("../../src/static/fonts/Send_Flowers/SendFlowers-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Spectral";
+    src: url("../../src/static/fonts/Spectral/Spectral-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Spectral";
+    src: url("../../src/static/fonts/Spectral/Spectral-Bold.ttf");
+    font-weight: bold;
+}
+
+body,
+body * {
+    font-family: "Spectral";
+}
+
+body {
     margin: 0rem;
 }
