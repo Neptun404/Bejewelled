@@ -1,5 +1,4 @@
 "use strict";
-console.log("Hello, World");
 const menuIconCont = document.getElementById("header__menu-container");
 let isOpened = false;
 function toggleMenu() {
